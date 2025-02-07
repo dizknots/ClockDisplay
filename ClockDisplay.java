@@ -12,6 +12,26 @@
  * @author Michael Kölling and David J. Barnes
  * @version 2016.02.29
  */
+
+/*
+ * Extra questions
+ * 
+ * 
+ * 30) Rectangle window = new Rectangle(int width, int height)
+ * 
+ * 33) Printer p1;
+ * public void print(String filename, boolean doubleSided)
+ * p1.print("file1.txt",true);
+ * p1.print("file2.txt",false;
+ *
+ * public int getStatus(int delay)
+ * int status = 0;
+ * status = p1.getStatus(3);
+ * status = p1.getStatus(30);
+ */
+
+
+
 public class ClockDisplay
 {
     private NumberDisplay hours;
@@ -40,7 +60,7 @@ public class ClockDisplay
         minutes = new NumberDisplay(60);
         setTime(hour, minute);
     }
-
+    
     /**
      * This method should get called once every minute - it makes
      * the clock display go one minute forward.
@@ -51,9 +71,13 @@ public class ClockDisplay
         if(minutes.getValue() == 0) {  // it just rolled over!
             hours.increment();
         }
+        
+        if(hours.getValue()==0);{
+            hours.setValue(12);
+        }  
         updateDisplay();
     }
-
+    
     /**
      * Set the time of the display to the specified hour and
      * minute.
